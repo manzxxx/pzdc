@@ -50,7 +50,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 35
 
 #define QAPP_ORG_NAME "PZDC"
-#define QAPP_ORG_DOMAIN "pizdec.io"
+#define QAPP_ORG_DOMAIN "pzdc.org"
 #define QAPP_APP_NAME_DEFAULT "PZDC-Qt"
 #define QAPP_APP_NAME_TESTNET "PZDC-Qt-testnet"
 

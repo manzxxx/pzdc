@@ -3,7 +3,7 @@ PZDC Core
 
 Setup
 ---------------------
-[PZDC Core](http://pizdec.io/wallet) is the original PZDC client and it builds the backbone of the network. However, it downloads and stores the entire history of PZDC transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+[PZDC Core](https://pzdc.org/downloads) is the original PZDC client and it builds the backbone of the network. However, it downloads and stores the entire history of PZDC transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
 
 Running
 ---------------------
@@ -26,10 +26,10 @@ Drag PZDC-Qt to your applications folder, and then run PZDC-Qt.
 
 ### Need Help?
 
-* See the documentation at the [PZDC Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [PZDC Wiki](https://github.com/pzdc-project/pzdc/wiki) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or on the [PZDC Forum](http://forum.pizdec.io/).
-* Join one of our Slack groups [PZDC Slack Groups](https://pizdec.io/slack-logins/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0).
+* Join our Discord [PZDC Discord](https://discord.gg/uZuDUq2).
 
 Building
 ---------------------
@@ -55,8 +55,8 @@ The Pzdc repo's [root README](https://github.com/PZDC-Project/PZDC/blob/master/R
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) or the [PZDC](http://forum.pizdec.io/) forum.
-* Join the [PZDC-Dev](https://pzdc-dev.slack.com/) Slack group ([Sign-Up](https://pzdc-dev.herokuapp.com/)).
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0).
+* Join the [PZDC Discord](https://discord.gg/uZuDUq2).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

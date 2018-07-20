@@ -54,11 +54,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000c6b2241d7e3475bf32fa3b90f5e06667a303bcc06b0d9e677ad5b434d0f"));
+    (0, uint256("0x00000c6b2241d7e3475bf32fa3b90f5e06667a303bcc06b0d9e677ad5b434d0f"))
+    (118816, uint256("0xb2234ffa48e958fae7fd88202ad5bfbb3a2550d95fb57c15b7e6f5ab097de4c4"))
+    ;
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1528527600, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1531970538, // * UNIX timestamp of last checkpoint block
+    238466,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -140,7 +142,8 @@ public:
         assert(hashGenesisBlock == uint256("0x00000c6b2241d7e3475bf32fa3b90f5e06667a303bcc06b0d9e677ad5b434d0f"));
         assert(genesis.hashMerkleRoot == uint256("0xccef03b022e8ec4b2059279cf2cda18ce63859f69c81b2ec0b1234c288133974"));
 
-        vSeeds.push_back(CDNSSeedData("pizdec.io", "seed.pizdec.io"));     // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("pizdec.io", "seed.pizdec.io"));   // DNS Seeder while it's still online
+        vSeeds.push_back(CDNSSeedData("pzdc.org", "seed.pzdc.org"));     // DNS Seeder to come
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55); //P
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13); //6
@@ -165,8 +168,8 @@ public:
         nPoolMaxTransactions = 3;
         strSporkKey = "0475bfa462c262b90eff254c0b7d43eb178c2b49c2187a818ef2450cd3e2f13b1f7142efc42e10c6953dd016aa41d416459e781416f569b750b8759cb0dfed02c8";
         strObfuscationPoolDummyAddress = "PN6kxewGqxwWH2m6BDKxYWp9V5LxiiXYdZ";
-        nStartMasternodePayments = 1528528200; 
-    	nMnCostBlockStart=new int[MN_STEPS]{0,48961,83521}; 
+        nStartMasternodePayments = 1528528200;
+    	nMnCostBlockStart=new int[MN_STEPS]{0,48961,83521};
 		nMnCost=new int[MN_STEPS]{1000,5000,25000};
 	}
 
@@ -202,7 +205,7 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 51197; 
+        nModifierUpdateBlock = 51197;
         nMaxMoneyOut = 43199500 * COIN;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
@@ -213,14 +216,14 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("pizdec.io", "testnet.seed.pizdec.io"));
+        vSeeds.push_back(CDNSSeedData("pzdc.org", "testnet.seed.pzdc.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 118); // Testnet pzdc addresses start with 'p'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 14);  // Testnet pzdc script addresses start with '6' or '7'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
         // Testnet pzdc BIP32 pubkeys start with
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x84)(0x65)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet pzdc BIP32 prvkeys start with 
+        // Testnet pzdc BIP32 prvkeys start with
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x81)(0x59)(0x37).convert_to_container<std::vector<unsigned char> >();
         // Testnet pzdc BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
@@ -238,8 +241,8 @@ public:
         nPoolMaxTransactions = 2;
         strSporkKey = "04ef875fc7165edc9141bf589120f13ba30809c46cb147cf4b288a8cc2be62ee1496e8d7935a0f1eeba12e5a14daab0797ed10a86faa2533111609aec7ea31c853";
         strObfuscationPoolDummyAddress = "pN6kxewGqxwWH2m6BDKxYWp9V5LxiiXYdZ";
-        nStartMasternodePayments = 1528528250; 
-    	nMnCostBlockStart=new int[MN_STEPS]{0,1000,2000}; 
+        nStartMasternodePayments = 1528528250;
+    	nMnCostBlockStart=new int[MN_STEPS]{0,1000,2000};
 		nMnCost=new int[MN_STEPS]{10,100,200};
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -289,7 +292,7 @@ public:
         fRequireStandard = false;
         fMineBlocksOnDemand = true;
         fTestnetToBeDeprecatedFieldRPC = false;
-    	nMnCostBlockStart=new int[MN_STEPS]{0,1500,2000}; 
+    	nMnCostBlockStart=new int[MN_STEPS]{0,1500,2000};
 		nMnCost=new int[MN_STEPS]{10,100,200};
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
