@@ -142,8 +142,7 @@ public:
         assert(hashGenesisBlock == uint256("0x00000c6b2241d7e3475bf32fa3b90f5e06667a303bcc06b0d9e677ad5b434d0f"));
         assert(genesis.hashMerkleRoot == uint256("0xccef03b022e8ec4b2059279cf2cda18ce63859f69c81b2ec0b1234c288133974"));
 
-        vSeeds.push_back(CDNSSeedData("pizdec.io", "seed.pizdec.io"));   // DNS Seeder while it's still online
-        vSeeds.push_back(CDNSSeedData("pzdc.org", "seed.pzdc.org"));     // DNS Seeder to come
+        vSeeds.push_back(CDNSSeedData("pzdc.icu", "seed.pzdc.icu"));   // DNS Seeder
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55); //P
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13); //6
