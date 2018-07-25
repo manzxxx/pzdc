@@ -5,6 +5,7 @@ autom4te.cache/
 build-aux/*
 config.log
 config.status
+configure
 .deps/
 */.deps/
 src/Makefile
@@ -19,3 +20,6 @@ src/test/buildenv.py
 share/setup.nsi
 share/qt/Info.plist
 src/config/*-config.h*
+qa/pull-tester/tests-config.sh
+qa/pull-tester/run-bitcoind-for-test.sh
+contrib/devtools/split-debug.sh
