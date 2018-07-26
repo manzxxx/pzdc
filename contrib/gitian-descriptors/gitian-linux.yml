@@ -1,11 +1,11 @@
 ---
-name: "pzdc-linux-2.0"
+name: "pzdc-linux-2.0.0.5"
 enable_cache: true
 suites:
 - "trusty"
 architectures:
 - "amd64"
-packages: 
+packages:
 - "curl"
 - "g++-arm-linux-gnueabihf"
 - "g++-4.8-arm-linux-gnueabihf"
