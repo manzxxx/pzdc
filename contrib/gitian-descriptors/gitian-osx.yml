@@ -26,6 +26,7 @@ packages:
 - "python"
 - "python-dev"
 - "python-setuptools"
+- "python3.6"
 - "fonts-tuffy"
 remotes:
 - "url": "https://github.com/pzdc-project/pzdc.git"
